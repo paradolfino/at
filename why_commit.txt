@@ -1,1 +1,2 @@
 05/02/2018 20:47:pool[rapid-baking-mountains-4jc414]: implement ability to drag a clone of element into stack, implement ability to drag cards into other orders within stack
+05/02/2018 21:06:pool[pretty-rolling-rabbits-004y2y]: begin implement of delete and clone controls for events dragged into stack
