@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Draggable + Sortable</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #launchPad {
+            float: left;
+            border: 1px solid #eaeaea;
+            background-color: #f5f5f5;
+        }
+
+        #dropZone {
+            float: right;
+            border: 1px solid #eaeaea;
+            background-color: #ffffcc;
+        }
+
+        .card {
+            width: 150px;
+            padding: 5px 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            background-color: #eaeaea;
+        }
+
+        .stack {
+            width: 180px;
+            border: 1px solid #ccc;
+            background-color: #f5f5f5;
+            margin: 20px;
+        }
+
+        .stackHdr {
+            background-color: #eaeaea;
+            border: 1px solid #fff;
+            padding: 5px
+        }
+
+        .stackDrop {
+            min-height: 100px;
+            padding: 0px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#launchPad").height($(window).height() - 20);
+            var dropSpace = $(window).width() - $("#launchPad").width();
+            $("#dropZone").width(dropSpace - 70);
+            $("#dropZone").height($("#launchPad").height());
+
+            $(".card").draggable({
+                appendTo: "body",
+                cursor: "pointer",
+                helper: 'clone',
+                revert: "invalid"
+            });
+
+            $(".stack").draggable({
+                appendTo: "body",
+                cursor: "pointer",
+                helper: 'clone',
+                revert: "invalid"
+            });
+
+            $("#launchPad").droppable({
+                tolerance: "intersect",
+                accept: ".card",
+                activeClass: "ui-state-default",
+                hoverClass: "ui-state-hover",
+                drop: function (event, ui) {
+                    $("#launchPad").append($(ui.draggable));
+                }
+            });
+
+            $(document.body).droppable({
+                tolerance: "intersect",
+                accept: ".stack",
+                activeClass: "ui-state-default",
+                hoverClass: "ui-state-hover",
+                drop: function (event, ui) {
+                    $(document.body).append($(ui.draggable));
+                    $( ".stack" ).clone().appendTo(document.body);
+                }
+            });
+
+            $(".stackDrop").droppable({
+                tolerance: "intersect",
+                accept: ".card",
+                activeClass: "ui-state-default",
+                hoverClass: "ui-state-hover",
+                drop: function (event, ui) {
+                    $(this).append($(ui.draggable));
+                }
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="launchPad">
+        <div class="card">
+            Event 1
+        </div>
+        <div class="card">
+            Event 2
+        </div>
+        <div class="card">
+            Event 3
+        </div>
+        <div class="card">
+            Event 4
+        </div>
+        <div class="card">
+            Event 5
+        </div>
+    </div>
+
+    <div id="dropZone">
+        <div class="stack">
+            <div class="stackHdr">
+                title 1 here
+            </div>
+            <div class="stackDrop">
+
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
