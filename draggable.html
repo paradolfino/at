@@ -79,7 +79,7 @@
                 activeClass: "ui-state-default",
                 hoverClass: "ui-state-hover",
                 drop: function (event, ui) {
-                    var x = this;
+                    var x = event;
                     $(this).append($(ui.draggable));
                     alert(JSON.stringify(x));
                 }
