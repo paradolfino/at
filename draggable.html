@@ -80,7 +80,7 @@
                 hoverClass: "ui-state-hover",
                 drop: function (event, ui) {
                     var x = $(this).append($(ui.draggable));
-                    alert($(x).attr('id'));
+                    alert(JSON.stringify($(x)));
                 }
             });
 
