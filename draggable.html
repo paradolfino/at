@@ -70,7 +70,10 @@
                 appendTo: "body",
                 cursor: "pointer",
                 helper: 'clone',
-                revert: "invalid"
+                revert: "invalid",
+                drop: function (event, ui) {
+                    $(this).append($(ui.draggable).clone());
+                }
             });
 
             $("#launchPad").droppable({
