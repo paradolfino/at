@@ -73,16 +73,6 @@
                 revert: "invalid"
             });
 
-            $("#launchPad").droppable({
-                tolerance: "intersect",
-                accept: ".card",
-                activeClass: "ui-state-default",
-                hoverClass: "ui-state-hover",
-                drop: function (event, ui) {
-                    $("#launchPad").append($(ui.draggable));
-                }
-            });
-
             $(".stackDrop").droppable({
                 tolerance: "intersect",
                 accept: ".card",
