@@ -82,17 +82,6 @@
                 }
             });
 
-            $(document.body).droppable({
-                tolerance: "intersect",
-                accept: ".stack",
-                activeClass: "ui-state-default",
-                hoverClass: "ui-state-hover",
-                drop: function (event, ui) {
-                    $(document.body).append($(ui.draggable));
-                    $( ".stack" ).clone().appendTo(document.body);
-                }
-            });
-
             $(".stackDrop").droppable({
                 tolerance: "intersect",
                 accept: ".card",
@@ -101,6 +90,10 @@
                 drop: function (event, ui) {
                     $(this).append($(ui.draggable));
                 }
+            });
+
+            $("#dropzone").click(()=>{
+
             });
 
         });
