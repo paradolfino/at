@@ -89,8 +89,7 @@
                 activeClass: "ui-state-default",
                 hoverClass: "ui-state-hover",
                 drop: function (event, ui) {
-                    $(this).x = 0;
-                    $(this).x == 0 && $(this).append($(ui.draggable).clone());
+                    $(this).append($(ui.draggable));
                 }
             });
 
