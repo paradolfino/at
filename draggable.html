@@ -67,7 +67,8 @@
             $("#dropZone").height($("#launchPad").height());
 
             $(".card").draggable({
-                appendTo: "body",
+                //appendTo: "body",
+                connectToSortable: ".stackDrop",
                 cursor: "pointer",
                 helper: 'clone',
                 revert: "invalid"
