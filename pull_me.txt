@@ -1,8 +1,4 @@
 
-### pool[rapid-baking-mountains-4jc414]:
-* implement ability to drag a clone of element into stack
-* implement ability to drag cards into other orders within stack
-
-### pool[pretty-rolling-rabbits-004y2y]:
-* begin implement of delete and clone controls for events dragged into stack
+### pool[brilliant-shining-cabins-8va4ep]:
+* implement ability to delete card on cloning
 

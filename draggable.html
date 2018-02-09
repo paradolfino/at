@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>jQuery UI Draggable + Sortable</title>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <style>
         body {
             margin: 0;
@@ -26,11 +26,13 @@
         }
 
         .card {
+            height: 20px;
             width: 150px;
             padding: 5px 10px;
             margin: 5px;
             border: 1px solid #ccc;
             background-color: #eaeaea;
+            cursor: pointer;
         }
 
         .stack {
@@ -56,6 +58,25 @@
             background-color: #f5f5f5;
             margin: 20px;
         }
+
+        .x-btn {
+            display: none;
+            
+        }
+
+        .x-btn-a {
+            height: 100%;
+            float: right;
+        }
+        
+        .x-btn-a:hover {
+            visibility: visible;
+        }
+
+        .card-text {
+            height: 100%;
+            float: left;
+        }
     </style>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -71,9 +92,13 @@
                 cursor: "pointer",
                 helper: 'clone',
                 revert: "invalid",
-                drag: function(event, ui) {
-                    console.log(JSON.stringify(event));
+                stop: function(event, ui) {
+
                 }
+            });
+
+            $(document).on('click','.card .x-btn-a',function(){
+                $(this).parent().remove();
             });
 
             $(".stackDrop").droppable({
@@ -83,6 +108,8 @@
                 hoverClass: "ui-state-hover",
                 drop: function (event, ui) {
                     $(this).append($(ui.draggable));
+                    $(ui.draggable).find('div').removeClass('x-btn');
+                    $(ui.draggable).find('div').addClass('x-btn-a');
                 }
             });
 
@@ -97,19 +124,7 @@
 
     <div id="launchPad">
         <div class="card">
-            Event 1
-        </div>
-        <div class="card">
-            Event 2
-        </div>
-        <div class="card">
-            Event 3
-        </div>
-        <div class="card">
-            Event 4
-        </div>
-        <div class="card">
-            Event 5
+            <div class="card-text">Event 1</div> <div class="x-btn">X</div>
         </div>
     </div>
 
