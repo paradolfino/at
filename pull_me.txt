@@ -1,1 +1,4 @@
 
+### pool[brilliant-shining-cabins-8va4ep]:
+* implement ability to delete card on cloning
+
