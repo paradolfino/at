@@ -88,6 +88,10 @@
                 }
             });
 
+            $(".card").click(function(){
+                $(this).remove();
+            });
+
             $(".stackDrop").droppable({
                 tolerance: "intersect",
                 accept: ".card",
