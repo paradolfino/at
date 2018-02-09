@@ -72,8 +72,8 @@
                 helper: 'clone',
                 revert: "invalid",
                 drag: function(event, ui) {
-                    this.x = 0;
-                    this.x++;
+                    $(this).attr("id") = 0;
+                    
                     console.log($(this).attr("id"));
                 }
             });
