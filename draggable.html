@@ -80,8 +80,11 @@
                 helper: 'clone',
                 revert: "invalid",
                 start: function(event, ui) {
-                    $(ui.helper).removeClass('x-btn');
-                    $(ui.helper).addClass('x-btn-a');
+    
+                    $(this).addClass('x-btn-a');
+                },
+                stop: function(event, ui) {
+                    $(this).removeClass('x-btn');
                 }
             });
 
