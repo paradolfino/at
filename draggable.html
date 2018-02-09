@@ -66,7 +66,7 @@
             text-align: right;
         }
         .x-btn-a:hover {
-            
+
         }
     </style>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -95,8 +95,8 @@
                 hoverClass: "ui-state-hover",
                 drop: function (event, ui) {
                     $(this).append($(ui.draggable));
-                    $(ui.draggable).find('span').removeClass('x-btn');
-                    $(ui.draggable).find('span').addClass('x-btn-a');
+                    $(ui.draggable).find('div').removeClass('x-btn');
+                    $(ui.draggable).find('div').addClass('x-btn-a');
                 }
             });
 
