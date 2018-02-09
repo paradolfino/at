@@ -72,9 +72,8 @@
                 helper: 'clone',
                 revert: "invalid",
                 drag: function(event, ui) {
-                    $(this).attr("id") = 0;
                     
-                    console.log($(this).attr("id"));
+                    console.log(this.tagName);
                 }
             });
 
