@@ -107,8 +107,8 @@
                 drop: function (event, ui) {
                     $(this).append($(ui.draggable));
                     
-                    $(ui.draggable).find('x-btn').addClass('x-btn-a');
-                    $(ui.draggable).find('x-btn').removeClass('x-btn');
+                    $(ui.draggable).find('div').addClass('x-btn-a');
+                    $(ui.draggable).find('div').removeClass('x-btn');
                 }
             });
 
@@ -121,7 +121,7 @@
 
     <div id="launchPad">
         <div class="card">
-            <div class="card-text">Event 1</div> <div class="x-btn">X</div>
+            <span class="card-text">Event 1</span> <div class="x-btn">X</div>
         </div>
     </div>
 
