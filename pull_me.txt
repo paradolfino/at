@@ -1,1 +1,4 @@
 
+### pool[brilliant-baking-villages-426401]:
+* implement on hover visibility for x button on dropped events
+
