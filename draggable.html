@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <style>
         body {
-            margin: 0;
+            width: 100%;
         }
 
         #launchPad {
@@ -19,10 +19,11 @@
         }
 
         #dropZone {
-            float: right;
+            height: 100%;
+            width: 100%;
             display: inline-block;
             border: 1px solid #eaeaea;
-            background-color: #ffffcc;
+            background-color: darkslategray;
         }
 
         .card {
@@ -67,15 +68,20 @@
         .x-btn-a {
             height: 100%;
             float: right;
+            opacity: 0;
         }
         
         .x-btn-a:hover {
-            visibility: visible;
+            opacity: 1;
         }
 
         .card-text {
             height: 100%;
             float: left;
+        }
+
+        .card-text-a {
+            height: 250px;
         }
     </style>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -92,9 +98,6 @@
                 cursor: "pointer",
                 helper: 'clone',
                 revert: "invalid",
-                stop: function(event, ui) {
-
-                }
             });
 
             $(document).on('click','.card .x-btn-a',function(){
@@ -108,14 +111,14 @@
                 hoverClass: "ui-state-hover",
                 drop: function (event, ui) {
                     $(this).append($(ui.draggable));
-                    $(ui.draggable).find('div').removeClass('x-btn');
-                    $(ui.draggable).find('div').addClass('x-btn-a');
+                    
+                    $(ui.draggable).find('.x-btn').addClass('x-btn-a');
+                    $(ui.draggable).find('.x-btn').removeClass('x-btn');
+                    $(ui.draggable).css("height",58);
                 }
             });
 
-            $(".stackDrop").sortable({
-                
-            });
+            $(".stackDrop").sortable({});
         });
     </script>
 </head>
@@ -124,7 +127,13 @@
 
     <div id="launchPad">
         <div class="card">
-            <div class="card-text">Event 1</div> <div class="x-btn">X</div>
+            <div class="card-text">Event 1</div> <div class="x-btn"><a href="#">X</a></div>
+        </div>
+        <div class="card">
+            <div class="card-text">Event 2</div> <div class="x-btn"><a href="#">X</a></div>
+        </div>
+        <div class="card">
+            <div class="card-text">Event 3</div> <div class="x-btn"><a href="#">X</a></div>
         </div>
     </div>
 

@@ -1,3 +1,5 @@
 05/02/2018 20:47:pool[rapid-baking-mountains-4jc414]: implement ability to drag a clone of element into stack, implement ability to drag cards into other orders within stack
 05/02/2018 21:06:pool[pretty-rolling-rabbits-004y2y]: begin implement of delete and clone controls for events dragged into stack
 08/02/2018 19:57:pool[brilliant-shining-cabins-8va4ep]: implement ability to delete card on cloning
+10/02/2018 18:48:pool[brilliant-baking-villages-426401]: implement on hover visibility for x button on dropped events
+10/02/2018 18:58:pool[happy-jumping-rivers-6s15j1]: implement size change to events when dropped into a sequence

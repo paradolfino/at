@@ -1,4 +1,7 @@
 
-### pool[brilliant-shining-cabins-8va4ep]:
-* implement ability to delete card on cloning
+### pool[brilliant-baking-villages-426401]:
+* implement on hover visibility for x button on dropped events
+
+### pool[happy-jumping-rivers-6s15j1]:
+* implement size change to events when dropped into a sequence
 
