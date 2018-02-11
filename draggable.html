@@ -111,7 +111,7 @@
                 drop: function (event, ui) {
                     $(this).append($(ui.draggable));
                     
-                    $(ui.draggable).find('div').addClass('x-btn-a');
+                    $(ui.draggable).find('div x-btn').addClass('x-btn-a');
                     $(ui.draggable).find('div').removeClass('x-btn');
                     $(ui.draggable).find('span').removeClass('card-text-a');
                 }
