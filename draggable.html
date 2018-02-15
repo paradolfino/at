@@ -118,8 +118,8 @@
                 $(this).parent().remove();
             });
 
-            $(document).on('click','.card .a-btn-a',function(){
-                $(this).parent().remove();
+            $(document).on('click','.card .a-btn',function(){
+                $(this).parent().clone();
             });
 
             $(".stackDrop").droppable({
