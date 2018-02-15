@@ -75,6 +75,20 @@
             opacity: 1;
         }
 
+        .a-btn {
+            /*display: none;*/
+        }
+
+        .a-btn-a {
+            height: 100%;
+            float: right;
+            opacity: 0;
+        }
+
+        .a-btn-a:hover {
+            opacity: 1;
+        }
+
         .card-text {
             height: 100%;
             float: left;
@@ -104,6 +118,10 @@
                 $(this).parent().remove();
             });
 
+            $(document).on('click','.card .a-btn',function(){
+                $(this).parent().clone().appendTo($(this).parent().parent());
+            });
+
             $(".stackDrop").droppable({
                 tolerance: "intersect",
                 accept: ".card",
@@ -127,7 +145,7 @@
 
     <div id="launchPad">
         <div class="card">
-            <div class="card-text">Event 1</div> <div class="x-btn"><a href="#">X</a></div>
+            <div class="card-text">Event 1</div> <div class="x-btn"><a href="#">X</a></div><div class="a-btn"><a href="#">A</a></div>
         </div>
         <div class="card">
             <div class="card-text">Event 2</div> <div class="x-btn"><a href="#">X</a></div>
