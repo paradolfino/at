@@ -104,6 +104,10 @@
                 $(this).parent().remove();
             });
 
+            $(document).on('click','.card .a-btn-a',function(){
+                $(this).parent().remove();
+            });
+
             $(".stackDrop").droppable({
                 tolerance: "intersect",
                 accept: ".card",
