@@ -1,1 +1,4 @@
 
+### pool[pretty-shining-mountains-26e6t4]:
+* begin implementation of cloning control for events
+
