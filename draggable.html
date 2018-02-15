@@ -119,8 +119,7 @@
             });
 
             $(document).on('click','.card .a-btn',function(){
-                $(this).parent().clone();
-                alert("test");
+                $(this).parent().clone().appendTo($(this));
             });
 
             $(".stackDrop").droppable({
