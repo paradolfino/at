@@ -120,6 +120,10 @@
                 $(this).parent()[0].className == "x-btn-a" && $(this).parent().parent().clone().appendTo($(this).parent().parent().parent());
             });
 
+            $(document).on('click','.add-seq',function(){
+                
+            });
+
             $(".stackDrop").droppable({
                 tolerance: "intersect",
                 accept: ".card",
@@ -144,6 +148,8 @@
                 }
                 
             });
+
+            
         });
     </script>
 </head>
