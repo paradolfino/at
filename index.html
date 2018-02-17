@@ -121,7 +121,7 @@
 
             $(document).on('click','.card .clone',function(){
                 console.log($(this).parent());
-                $(this).parent().parent().clone().appendTo($(this).parent().parent().parent());
+                $(this).parent() == ".btn-a" && $(this).parent().parent().clone().appendTo($(this).parent().parent().parent());
             });
 
             $(".stackDrop").droppable({
