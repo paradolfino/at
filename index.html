@@ -132,10 +132,9 @@
                 drop: function (event, ui) {
                     $(this).append($(ui.draggable));
                     
-                    $(ui.draggable).find('.x-btn').addClass('x-btn-a');
-                    $(ui.draggable).find('.x-btn').removeClass('x-btn');
-                    $(ui.draggable).find('.a-btn').addClass('a-btn-a');
-                    $(ui.draggable).find('.a-btn').removeClass('a-btn');
+                    $(ui.draggable).find('.btns').addClass('x-btn-a');
+                    $(ui.draggable).find('.btns').removeClass('x-btn');
+
                     $(ui.draggable).css("height",58);
                 }
             });
@@ -149,7 +148,7 @@
 
     <div id="launchPad">
         <div class="card">
-            <div class="card-text">Event 1</div> <div class="x-btn"><a class="delete" href="#">X</a><a class="clone" href="#">A</a></div>
+            <div class="card-text">Event 1</div> <div class="btns"><a class="btn-delete" href="#">X</a><a class="btn-clone" href="#">A</a></div>
         </div>
         <div class="card">
             <div class="card-text">Event 2</div> <div class="x-btn"><a href="#">X</a></div>
