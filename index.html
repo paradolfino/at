@@ -104,6 +104,9 @@
                 cursor: "pointer",
                 helper: 'clone',
                 revert: "invalid",
+                drop: function(event, ui) {
+                    $(ui.draggable).css("height",58);
+                }
             });
 
             $(document).on('click','.card .btn-delete',function(){
@@ -125,7 +128,7 @@
                     $(ui.draggable).find('.btns').addClass('x-btn-a');
                     $(ui.draggable).find('.btns').removeClass('btns');
 
-                    $(ui.draggable).css("height",58);
+                    
                 }
             });
 
