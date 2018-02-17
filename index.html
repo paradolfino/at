@@ -116,7 +116,7 @@
             });
 
             $(document).on('click','.card .btn-delete',function(){
-                $(this).parent().parent().remove();
+                $(this).parent()[0].className == "x-btn-a" && $(this).parent().parent().remove();
             });
 
             $(document).on('click','.card .btn-clone',function(){
