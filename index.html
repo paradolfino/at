@@ -120,7 +120,7 @@
             });
 
             $(document).on('click','.card .btn-clone',function(){
-                console.log($(this).parent().tagName);
+                console.log($(this).parent()[0].tagName);
                 $(this).parent() == ".btns" && $(this).parent().parent().clone().appendTo($(this).parent().parent().parent());
             });
 
