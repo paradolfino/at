@@ -121,7 +121,7 @@
             });
 
             $(document).on('click','.add-seq',function(){
-                $("#dropZone").append($(".stack"));
+                $(".stack").clone().appendTo($("#dropZone"));
             });
 
             $(".stackDrop").droppable({
