@@ -4,3 +4,4 @@
 10/02/2018 18:48:pool[brilliant-baking-villages-426401]: implement on hover visibility for x button on dropped events
 10/02/2018 18:58:pool[happy-jumping-rivers-6s15j1]: implement size change to events when dropped into a sequence
 14/02/2018 20:30:pool[pretty-shining-mountains-26e6t4]: begin implementation of cloning control for events
+16/02/2018 20:55:pool[pretty-living-villages-68008f]: implement event cloning, implement both delete and clone controls in one div that is hidden until hover, implement cloning of events - but only within actual sequences, begin implement of adding new sequences
