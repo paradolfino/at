@@ -115,11 +115,11 @@
                 revert: "invalid",
             });
 
-            $(document).on('click','.card #delete',function(){
+            $(document).on('click','#delete',function(){
                 $(this).parent().remove();
             });
 
-            $(document).on('click','.card #clone',function(){
+            $(document).on('click','#clone',function(){
                 $(this).parent().clone().appendTo($(this).parent().parent());
             });
 
