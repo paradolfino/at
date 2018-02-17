@@ -121,7 +121,7 @@
 
             $(document).on('click','.card .clone',function(){
                 console.log($(this).parent());
-                $(this).parent() == ".btn-a" && $(this).parent().parent().clone().appendTo($(this).parent().parent().parent());
+                $(this).parent() == ".btns" && $(this).parent().parent().clone().appendTo($(this).parent().parent().parent());
             });
 
             $(".stackDrop").droppable({
@@ -133,7 +133,7 @@
                     $(this).append($(ui.draggable));
                     
                     $(ui.draggable).find('.btns').addClass('x-btn-a');
-                    $(ui.draggable).find('.btns').removeClass('x-btn');
+                    $(ui.draggable).find('.btns').removeClass('btns');
 
                     $(ui.draggable).css("height",58);
                 }
