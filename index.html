@@ -132,7 +132,10 @@
             $(".stackDrop").sortable({});
 
             $("#dropZone").droppable({
-                $(ui.draggable).css("height",58);
+                drop: function(event, ui){
+                    $(ui.draggable).css("height",58);
+                }
+                
             });
         });
     </script>
