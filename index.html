@@ -126,7 +126,7 @@
             });
 
             $(document).on('click','.add-seq',function(){
-                $("#template:first").clone().css("display","block").attr("id","new").appendTo($("#dropZone"));
+                $("#template:first").clone().css("display","block").attr("id",null).appendTo($("#dropZone"));
                 $(".stackDrop").sortable({});
                 
             });
