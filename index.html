@@ -131,6 +131,13 @@
                 
             });
 
+            $(".stack").droppable({
+                drop: function(event, ui){
+                    //should not drop in dropzone, but prevent resize issues for stackDrop
+                    $(ui.draggable).css("height",58);
+                }
+                
+            });
 
             $(".stackDrop").droppable({
                 tolerance: "intersect",
@@ -139,6 +146,7 @@
                 hoverClass: "ui-state-hover",
                 drop: function (event, ui) {
                     $(this).append($(ui.draggable));
+                    
                     $(ui.draggable).find('.btns').addClass('x-btn-a');
                     $(ui.draggable).find('.btns').removeClass('btns');
                     $(ui.draggable).css("height",58);
@@ -149,6 +157,13 @@
 
             $(".stackDrop").sortable({});
 
+            $("#dropZone").droppable({
+                drop: function(event, ui){
+                    //should not drop in dropzone, but prevent resize issues for stackDrop
+                    $(ui.draggable).css("height",20);
+                }
+                
+            });
             
             
         });
