@@ -1,7 +1,5 @@
 
-### pool[pretty-living-villages-68008f]:
-* implement event cloning
-* implement both delete and clone controls in one div that is hidden until hover
-* implement cloning of events - but only within actual sequences
-* begin implement of adding new sequences
+### pool[lovely-running-rabbits-jgvmg5]:
+* implement adding new sequences
+* implement dragging events to new sequences
 
