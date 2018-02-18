@@ -146,7 +146,7 @@
                 hoverClass: "ui-state-hover",
                 drop: function (event, ui) {
                     $(this).append($(ui.draggable));
-                    console.log($(ui.draggable).parent().className);
+                    console.log($(ui.draggable).parent()[0].className);
                     $(ui.draggable).find('.btns').addClass('x-btn-a');
                     $(ui.draggable).find('.btns').removeClass('btns');
                     $(ui.draggable).css("height",58);
