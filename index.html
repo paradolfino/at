@@ -131,14 +131,6 @@
                 
             });
 
-            $(".stack").droppable({
-                drop: function(event, ui){
-                    //should not drop in dropzone, but prevent resize issues for stackDrop
-                    $(ui.draggable).css("height",58);
-                }
-                
-            });
-
             $(".stackDrop").droppable({
                 tolerance: "intersect",
                 accept: ".card",
@@ -164,7 +156,14 @@
                 }
                 
             });
-            
+            $("#launchPad").droppable({
+                drop: function(event, ui){
+                    //should not drop in dropzone, but prevent resize issues for stackDrop
+                    $(ui.draggable).css("height",20);
+                }
+                
+            });
+
             
         });
     </script>
